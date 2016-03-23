@@ -1,0 +1,20 @@
+How to use an elevator.
+
+1) If your your direction is up press up or else press down
+2) When prompt enter elevator
+3) If your floor is 1 select 1 or else select floor down from 10
+4) Once selected floor is reached, exit elevation 
+
+How exit my apartment
+
+1) Grab keys on left wall.
+2) Take three steps forward then stop.
+3) lift right arm towards knob then stop.
+4) Turn knob left and pull back
+5) Take 5 steps forwards.
+6) Turn 90 degrees clockwise.
+7) Walk 30 Steps
+8) lift right arm towards handle then stop.
+9) Grab handle and pull back
+10) Take 4 steps forward
+11) Complete 
