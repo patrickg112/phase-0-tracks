@@ -1,1 +1,28 @@
-body {color: red;}
+header {
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+  color: white;
+}
+
+header {
+    background-image: url("http://www.robertbowenart.com/wp-content/gallery/art/github-octocat.jpg");
+    background-color: black;
+    background-size:   300px;
+    }
+
+
+.column-1 {
+
+background-color: red;
+position: absolute;
+width: 700px;
+ 
+}
+
+.column-2 {
+  background-color: blue;
+  position: relative;
+  float: right;
+  width: 700px;
+  }
