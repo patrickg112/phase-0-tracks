@@ -28,3 +28,14 @@ p cat
 house_pets = dogs + cat 
 
 p house_pets
+
+def build_array
+	p 1, "two", nil
+end
+
+def add_to_array(arr, value)
+  arr.push(value)
+end
+
+p add_to_array([1,2,3], 3)
+p add_to_array(["red", "blue", "yellow"], "orange")
