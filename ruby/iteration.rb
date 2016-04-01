@@ -29,3 +29,38 @@ end
 
 p honda
 p ford
+
+juice = ["apple", "orange", "pineapple", "strawberry"]
+
+fruits = {
+  apple: 17,
+  oranges: 50,
+  pineapple: 7,
+  strawberry: 100
+}
+p fruits
+
+p juice
+
+#deleting any fruit with value greater than 90
+fruits.map do |f, n|
+  if n > 90
+    fruits.delete(f)
+  end
+end
+
+p "------------------------------------------------"
+
+juice.each do|j|
+  index = 1
+  #adding an addional fruit
+  if index < juice.length
+  juice << "coconuts"
+  break
+  end
+end
+
+
+p fruits
+
+p juice
