@@ -1,29 +1,30 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Patrick Guerrier and Thuy Ngo.
+# We spent [#] hours on this challenge 2hrs.
 
 # EXPLANATION OF require_relative
 #
-#
+# require pulls more from library and require_relative pulls from your local computer
 require_relative 'state_data'
 
 class VirusPredictor
 
-  def initialize(state_of_origin, population_density, population)
-    @state = state_of_origin
+  def initialize(state, population_density, population)
+    @state = state
     @population = population
     @population_density = population_density
+        
   end
 
-  def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+   def virus_effects
+    predicted_deaths
+    speed_of_spread
   end
 
   private
 
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,7 +42,7 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -76,3 +77,18 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+#  symbols require less memory and are represented by ":". strings are represented by "".
+
+# What does require_relative do? How is it different from require?
+#  require pulls more from library and require_relative pulls from your local computer
+
+# What are some ways to iterate through a hash?
+#  with .each do or if/elsif/else and calling up keys and values
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+#  help reduce repetitive factor if you utilize them correctly
+
+# What concept did you most solidify in this challenge?
+#  Nothing really stuck for me.  Hash iteration and refactoring cleared up a little, but things are still confusing.
