@@ -1,0 +1,65 @@
+1)
+
+sqlite> SELECT * FROM airlines;                                                 1|American Airlines|943|1|True
+2|United Airlines|717|1|True
+3|Southwest Airlines|718|1|True
+4|British Airways|290|2|false
+5|KLM Airways|115|3|false
+6|Emirates Airlines|234|4|false
+7|Qantas Airlines|131|5|false
+sqlite>
+
+2)
+
+sqlite> UPDATE Airlines SET Aircraft=150 WHERE name= "Qantas Airlines";
+sqlite> SELECT * FROM airlines;
+1|American Airlines|943|1|True
+2|United Airlines|717|1|True
+3|Southwest Airlines|718|1|True
+4|British Airways|290|2|false
+5|KLM Airways|115|3|false
+6|Emirates Airlines|234|4|false
+7|Qantas Airlines|150|5|false
+
+3)
+
+sqlite> SELECT * FROM airlines, country WHERE airlines.origin_country_id = country.id;
+1|American Airlines|943|1|True|1|USA
+2|United Airlines|717|1|True|1|USA
+3|Southwest Airlines|718|1|True|1|USA
+4|British Airways|290|2|false|2|UK
+5|KLM Airways|115|3|false|3|Netherlands
+6|Emirates Airlines|234|4|false|4|UAE
+7|Qantas Airlines|150|5|false|5|Australia
+
+4)
+
+sqlite> SELECT airlines.name, country.name FROM airlines JOIN country ON airlines.origin_country_id = country.id;
+American Airlines|USA
+United Airlines|USA
+Southwest Airlines|USA
+British Airways|UK
+KLM Airways|Netherlands
+Emirates Airlines|UAE
+Qantas Airlines|Australia
+
+5)
+
+sqlite> DELETE FROM airlines WHERE aircraft=717;
+sqlite> SELECT * FROM airlines;
+1|American Airlines|943|1|True
+3|Southwest Airlines|718|1|True
+4|British Airways|290|2|false
+5|KLM Airways|115|3|false
+6|Emirates Airlines|234|4|false
+7|Qantas Airlines|150|5|false
+
+additional join
+
+sqlite> SELECT airlines.lga_flights, country.name FROM airlines JOIN country ON airlines.origin_country_id = country.id;
+True|USA
+True|USA
+false|UK
+false|Netherlands
+false|UAE
+false|Australia
