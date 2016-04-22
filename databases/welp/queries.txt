@@ -1,0 +1,30 @@
+1)
+
+sqlite> SELECT * FROM reviews, businesses, users  WHERE reviews.user_id= business_id;
+1|5|Great food|1|1|1|I dont know|1|Patrick|Guerrier
+2|1|horrible food|2|2|1|I dont know|1|Patrick|Guerrier
+
+2)
+
+5|Great food|Patrick|Guerrier|Great Place Diner
+5|Great food|Funny|Guy|Great Place Diner
+5|Great food|Patrick|Guerrier|I Dont know  Diner
+5|Great food|Funny|Guy|I Dont know  Diner
+1|horrible food|Patrick|Guerrier|Great Place Diner
+1|horrible food|Funny|Guy|Great Place Diner
+1|horrible food|Patrick|Guerrier|I Dont know  Diner
+1|horrible food|Funny|Guy|I Dont know  Diner
+
+3)
+
+sqlite> SELECT stars, comments, first_name, last_name, "Great Place Diner"  FROM reviews, users, businesses;
+5|Great food|Patrick|Guerrier|Great Place Diner
+5|Great food|Patrick|Guerrier|Great Place Diner
+5|Great food|Funny|Guy|Great Place Diner
+5|Great food|Funny|Guy|Great Place Diner
+1|horrible food|Patrick|Guerrier|Great Place Diner
+1|horrible food|Patrick|Guerrier|Great Place Diner
+1|horrible food|Funny|Guy|Great Place Diner
+1|horrible food|Funny|Guy|Great Place Diner
+
+4)
